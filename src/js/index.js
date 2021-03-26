@@ -18,8 +18,12 @@ form.addEventListener("submit", (e) => {
     var password = document.getElementById("password").value;
   
     if (checkBox && lengthInput(password)) {
-        alert("Zalogowano");
-      
+        e.preventDefault();
+        setTimeout(function() {
+            document.getElementById("textSuccess").style.opacity = 1;
+            document.getElementById("show-popup-form").style.opacity = 0;
+            document.getElementById("form-container").style.display = "none";
+        },3000)      
     } else {
       alert("Not logged in");
       document.getElementById("email").innerHTML = "";
