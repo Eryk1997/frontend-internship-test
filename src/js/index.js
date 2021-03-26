@@ -10,3 +10,30 @@ document.getElementById("closeForm").onclick = function() {
     document.getElementById("show-popup-form").style.display = "block";
 };
   
+
+var checkBox;
+const form = document.getElementById("form-container");
+
+form.addEventListener("submit", (e) => {
+    var password = document.getElementById("password").value;
+  
+    if (checkBox && lengthInput(password)) {
+        alert("Zalogowano");
+      
+    } else {
+      alert("Not logged in");
+      document.getElementById("email").innerHTML = "";
+      document.getElementById("password").innerHTML = "";
+    }
+});
+
+function lengthInput(password) {
+    var pom;
+    password.length < 30 ? (pom = true) : (pom = false);
+    return pom;
+}
+
+function myFunction() {
+    var pom = document.getElementById("myCheck");
+    pom.checked ? (checkBox = true) : (checkBox = false);
+  }

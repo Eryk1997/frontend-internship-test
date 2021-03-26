@@ -80,11 +80,19 @@ body {
     margin-top: -15px;
 }
   
+
+.center-tekst {
+    font-family: "Lobster", cursive;
+}
+
 #form-container .btn:hover,
   .open-button:hover {
     background-color: rgb(252, 136, 142);
 }
 
-.center-tekst {
-    font-family: "Lobster", cursive;
+
+.paddingCheckbox {
+  padding: 0 17px;
+  text-align: left;
+  margin: 5px auto 20px;
 }
